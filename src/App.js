@@ -60,7 +60,7 @@ function App() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 style={styles.heading}>🎂 Login for a Surprise! 🎁</h2>
+          <h2 style={styles.heading}>🎂 Login for a Surprise! HEHE🎁</h2>
           <input
             type="text"
             placeholder="Username"
