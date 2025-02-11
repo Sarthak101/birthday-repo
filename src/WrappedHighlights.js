@@ -37,7 +37,7 @@ const WrappedHighlights = ({ onNext }) => {
       transition={{ duration: 0.5 }}
       style={styles.container}
     >
-      <h1 style={styles.heading}>📺 Animes Watched This Year 🎉</h1>
+      <h1 style={styles.heading}>📺 Animes Watched This Year hehe 🎉</h1>
       <div style={styles.grid}>
         {animes.map((anime, index) => (
           <motion.div
@@ -62,6 +62,7 @@ const styles = {
     color: "#fff",
     maxWidth: "100%",
     overflowX: "hidden",
+    paddingTop: "40px", // Added top padding here
   },
   heading: {
     fontSize: "22px",
