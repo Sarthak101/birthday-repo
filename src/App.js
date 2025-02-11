@@ -6,6 +6,9 @@ import WrappedHighlights from "./WrappedHighlights";
 import WrappedFavorites from "./WrappedFavorites";
 import WrappedPhotos from "./WrappedPhotos";
 import WrappedLoveLetter from "./WrappedLoveLetter";
+import panda1 from "./panda1";
+
+
 
 const pages = [
   BirthdaySurprise,
@@ -14,6 +17,7 @@ const pages = [
   WrappedFavorites,
   WrappedPhotos,
   WrappedLoveLetter,
+  panda1
 ];
 
 function App() {

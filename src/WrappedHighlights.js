@@ -62,7 +62,9 @@ const styles = {
     color: "#fff",
     maxWidth: "100%",
     overflowX: "hidden",
-    paddingTop: "40px", // Added top padding here
+    overflowY: "auto",
+    maxHeight: "80vh",
+    paddingTop: "40px",
   },
   heading: {
     fontSize: "22px",
@@ -71,7 +73,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", // Adjusts better for mobile
+    gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
     gap: "12px",
     justifyContent: "center",
     padding: "0 10px",
@@ -93,9 +95,9 @@ const styles = {
     marginTop: "8px",
     fontSize: "14px",
     fontWeight: "bold",
-    whiteSpace: "nowrap", // Prevents breaking but ensures good spacing
+    whiteSpace: "nowrap",
     overflow: "hidden",
-    textOverflow: "ellipsis", // Adds "..." if text overflows
+    textOverflow: "ellipsis",
   },
 };
 

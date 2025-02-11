@@ -1,6 +1,7 @@
 import React from "react";
-import oneImage from "./resources/one.jpg"; // Import the image
-
+import oneImage from "./resources/close.jpg"; // Import the image
+import twoImage from "./resources/one.jpg"; // Import another image
+import threeImage from "./resources/kawaiii.jpg"; // Import another image
 
 const BirthdaySurprise = ({ onBack }) => {
   return (
@@ -10,11 +11,11 @@ const BirthdaySurprise = ({ onBack }) => {
       <p style={styles.message}>
         MYYYY BABYY IS 19 NOW MUHEHEHEHHEHEHEHEHE
       </p>
-      <img 
-        src={oneImage} 
-        alt="My Love 💖" 
-        style={styles.image}
-      />
+      <div style={styles.imageGrid}>
+        <img src={oneImage} alt="My Love 💖" style={styles.image} />
+        <img src={twoImage} alt="Celebration" style={styles.image} />
+        <img src={threeImage} alt="Memories" style={styles.image} />
+      </div>
     </div>
   );
 };
@@ -22,7 +23,7 @@ const BirthdaySurprise = ({ onBack }) => {
 // Inline CSS styles
 const styles = {
   birthdayBox: {
-    position: "relative", // Needed to position the back button inside
+    position: "relative",
     background: "white",
     padding: "20px",
     borderRadius: "12px",
@@ -40,24 +41,27 @@ const styles = {
     color: "#444",
     marginBottom: "15px",
   },
+  imageGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))", // Responsive grid
+    gap: "10px", // Space between images
+    marginTop: "10px",
+  },
   image: {
     width: "100%",
-    maxWidth: "250px",
     borderRadius: "12px",
-    marginTop: "10px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
   },
   backButton: {
     position: "absolute",
     top: "0px",
     left: "10px",
-    fontSize: "28px", // Increased font size for a bigger button
+    fontSize: "28px",
     background: "transparent",
     border: "none",
     cursor: "pointer",
     color: "#ff6f91",
-    padding: "10px", // Added padding to increase clickable area
-
+    padding: "10px",
   },
 };
 
