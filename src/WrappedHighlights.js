@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const animes = [
@@ -26,9 +26,15 @@ const animes = [
     title: "Sakamoto Days",
     poster: "https://upload.wikimedia.org/wikipedia/en/c/c8/Sakamoto_Days_manga_volume_1.jpg",
   },
+  {
+    title : "Hell's Paradise",
+    poster : "https://m.media-amazon.com/images/M/MV5BZjhmMjhkNjUtMGU2MC00N2IzLTg1YzItZDk5ODMxMDYxODc0XkEyXkFqcGc@._V1_.jpg",
+  }
 ];
 
-const WrappedHighlights = ({ onNext }) => {
+const WrappedHighlights = () => {
+  
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

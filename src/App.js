@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BirthdaySurprise from "./BirthdaySurprise";
 import WrappedIntro from "./WrappedIntro";
@@ -6,10 +6,17 @@ import WrappedHighlights from "./WrappedHighlights";
 import WrappedFavorites from "./WrappedFavorites";
 import WrappedPhotos from "./WrappedPhotos";
 import WrappedLoveLetter from "./WrappedLoveLetter";
-import panda1 from "./panda1";
-
-
-
+import Panda2 from "./Panda2";
+import Panda3 from "./Panda3";
+import Final from "./final";
+import HBD from "./HBD";
+import CupNoodles from "./CupNoodles";
+import AdorableSmile from "./AdorableSmile";
+import Eating from "./Eating";
+import LoveSleeping from "./LoveSleeping";
+import Love from "./Love";
+import LoveMe from "./LoveMe";
+import LoveLetter from "./LoveLetter";
 const pages = [
   BirthdaySurprise,
   WrappedIntro,
@@ -17,7 +24,17 @@ const pages = [
   WrappedFavorites,
   WrappedPhotos,
   WrappedLoveLetter,
-  panda1
+  Panda2,
+  Panda3,
+  HBD,
+  CupNoodles,
+  AdorableSmile,
+  Eating,
+  LoveSleeping,
+  Love,
+  LoveMe,
+  LoveLetter,
+  Final,
 ];
 
 function App() {
@@ -25,6 +42,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const audioRef = useRef(new Audio(require("./resources/music.mp4")));
 
   const handleLogin = () => {
     if (username === "DakuChowmein" && password === "InuIsFood") {
@@ -51,6 +69,10 @@ function App() {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 1);
     }
+  };
+
+  const handlePlayMusic = () => {
+    audioRef.current.play();
   };
 
   const CurrentComponent = pages[currentPage];
@@ -90,7 +112,7 @@ function App() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
           >
-            <CurrentComponent onBack={handleBack} />
+            <CurrentComponent onBack={handleBack} onPlayMusic={handlePlayMusic} />
             <div style={styles.navButtons}>
               {currentPage > 0 && <button onClick={prevPage} style={styles.button}>⬅ Back</button>}
               {currentPage < pages.length - 1 && <button onClick={nextPage} style={styles.button}>Next ➡</button>}
@@ -155,7 +177,5 @@ const styles = {
     
   },
 };
-
-
 
 export default App;
