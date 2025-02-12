@@ -54,7 +54,7 @@ const Final = () => {
         </div>
       ) : (
         <>
-          <h1 style={styles.title}>Will you marry me?</h1>
+          <h1 style={styles.title}>Wan marry? 💍</h1>
           <img src={marriageImage} alt="Cute" style={styles.loveImage} />
 
           <div style={styles.buttonContainer}>
